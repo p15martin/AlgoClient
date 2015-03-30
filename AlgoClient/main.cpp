@@ -7,9 +7,15 @@
 //
 
 #include <iostream>
+#include <algorithmia/algorithmia.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int main(int argc, char *args[])
+{
+    wcout << L"Calling Algorithmia..." << endl;
+    
+    callalgorithmia();
+    
     return 0;
 }

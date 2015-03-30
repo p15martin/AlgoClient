@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A903F42B1AC9EE78006147D3 /* libboost_chrono.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A903F4271AC9EE78006147D3 /* libboost_chrono.dylib */; };
+		A903F42C1AC9EE78006147D3 /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A903F4281AC9EE78006147D3 /* libboost_system.dylib */; };
+		A903F42D1AC9EE78006147D3 /* libboost_thread-mt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A903F4291AC9EE78006147D3 /* libboost_thread-mt.dylib */; };
+		A903F42E1AC9EE78006147D3 /* libcpprest.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A903F42A1AC9EE78006147D3 /* libcpprest.2.5.dylib */; };
+		A903F4311ACA062F006147D3 /* libalgorithmia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A903F4251AC9EE61006147D3 /* libalgorithmia.a */; };
 		A9B9B6C21AB3A27900C008BF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9B9B6C11AB3A27900C008BF /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,15 +28,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A903F4251AC9EE61006147D3 /* libalgorithmia.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libalgorithmia.a; path = ../algorithmia/lib/libalgorithmia.a; sourceTree = "<group>"; };
+		A903F4271AC9EE78006147D3 /* libboost_chrono.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_chrono.dylib; path = ../../../../../../usr/local/Cellar/boost/1.57.0/lib/libboost_chrono.dylib; sourceTree = "<group>"; };
+		A903F4281AC9EE78006147D3 /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = ../../../../../../usr/local/Cellar/boost/1.57.0/lib/libboost_system.dylib; sourceTree = "<group>"; };
+		A903F4291AC9EE78006147D3 /* libboost_thread-mt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libboost_thread-mt.dylib"; path = "../../../../../../usr/local/Cellar/boost/1.57.0/lib/libboost_thread-mt.dylib"; sourceTree = "<group>"; };
+		A903F42A1AC9EE78006147D3 /* libcpprest.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcpprest.2.5.dylib; path = ../algorithmia/casablanca/build.release/Binaries/libcpprest.2.5.dylib; sourceTree = "<group>"; };
 		A9B9B6BE1AB3A27900C008BF /* AlgoClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgoClient; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B9B6C11AB3A27900C008BF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A9B9B6BB1AB3A27900C008BF /* Frameworks */ = {
+		A9B9B8061AB7A92A00C008BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A903F4311ACA062F006147D3 /* libalgorithmia.a in Frameworks */,
+				A903F42B1AC9EE78006147D3 /* libboost_chrono.dylib in Frameworks */,
+				A903F42C1AC9EE78006147D3 /* libboost_system.dylib in Frameworks */,
+				A903F42D1AC9EE78006147D3 /* libboost_thread-mt.dylib in Frameworks */,
+				A903F42E1AC9EE78006147D3 /* libcpprest.2.5.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +56,11 @@
 		A9B9B6B51AB3A27900C008BF = {
 			isa = PBXGroup;
 			children = (
+				A903F4271AC9EE78006147D3 /* libboost_chrono.dylib */,
+				A903F4281AC9EE78006147D3 /* libboost_system.dylib */,
+				A903F4291AC9EE78006147D3 /* libboost_thread-mt.dylib */,
+				A903F42A1AC9EE78006147D3 /* libcpprest.2.5.dylib */,
+				A903F4251AC9EE61006147D3 /* libalgorithmia.a */,
 				A9B9B6C01AB3A27900C008BF /* AlgoClient */,
 				A9B9B6BF1AB3A27900C008BF /* Products */,
 			);
@@ -70,8 +90,8 @@
 			buildConfigurationList = A9B9B6C51AB3A27900C008BF /* Build configuration list for PBXNativeTarget "AlgoClient" */;
 			buildPhases = (
 				A9B9B6BA1AB3A27900C008BF /* Sources */,
-				A9B9B6BB1AB3A27900C008BF /* Frameworks */,
 				A9B9B6BC1AB3A27900C008BF /* CopyFiles */,
+				A9B9B8061AB7A92A00C008BF /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,14 +222,38 @@
 		A9B9B6C61AB3A27900C008BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SOURCE_ROOT)/../algorithmia/lib/include",
+					"$(SOURCE_ROOT)/../algorithmia/dependencies/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SOURCE_ROOT)/../algorithmia/lib",
+					"$(SOURCE_ROOT)/../algorithmia/dependencies/osx",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 			};
 			name = Debug;
 		};
 		A9B9B6C71AB3A27900C008BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SOURCE_ROOT)/../algorithmia/lib/include",
+					"$(SOURCE_ROOT)/../algorithmia/dependencies/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SOURCE_ROOT)/../algorithmia/lib",
+					"$(SOURCE_ROOT)/../algorithmia/dependencies/osx",
+				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 			};
 			name = Release;
 		};
@@ -232,6 +276,7 @@
 				A9B9B6C71AB3A27900C008BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
